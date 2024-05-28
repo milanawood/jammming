@@ -61,6 +61,12 @@ function App() {
     };
   };
 
+  function removeTrack(track) {
+    const removalTrack = playlistTracks.filter((t) => track.id !== track.id);
+    setPlaylistTracks(removalTrack);
+  }
+
+
   return (
 
     <div>
@@ -72,9 +78,14 @@ function App() {
 
       <div className={styles["App-playlist"]}>
         {/* Add search results component*/}
-        <SearchResults userSearchResults={searchResults} onAdd={addTrack} />
+        <SearchResults 
+        userSearchResults={searchResults} 
+        onAdd={addTrack} />
         {/* Add playlist component*/}
-        <Playlist playlistName={playlistName} playlistTracks={playlistTracks}/>
+        <Playlist 
+        playlistName={playlistName} 
+        playlistTracks={playlistTracks} 
+        onRemove={removeTrack}/>
       </div>
     </div>
     </div>
