@@ -10,14 +10,16 @@ function App() {
   return (
     <div>
       <header className={styles.highlight}>
-        <h1>Ja<span className="highlight">mmm</span>ing</h1>
+        <h1>Ja<span className={styles.highlight}>mmm</span>ing</h1>
       </header>
-    <div className={styles.App} >
+    <div className="App" >
       <SearchBar />
 
-      <div className={styles["App-Playlist"]}>
+      <div className={styles["App-playlist"]}>
         {/* Add search results component*/}
+        <SearchResults />
         {/* Add playlist component*/}
+        <Playlist />
       </div>
     </div>
     </div>
