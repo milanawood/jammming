@@ -5,7 +5,7 @@ import Tracklist from "../Tracklist/Tracklist";
 function Playlist() {
   return (
     <div className={styles.Playlist}>
-      <input defaultValue={"New Playlist"} />
+      <input defaultValue={styles["New Playlist"]} />
       <Tracklist />
       <button className={styles["Playlist-save"]}>
         SAVE TO SPOTIFY
