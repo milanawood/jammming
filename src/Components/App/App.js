@@ -28,6 +28,29 @@ function App() {
     }
   ]);
 
+  const [playlistName, setPlaylistName] = useState("My Playlist")
+
+  const [playlistTracks, setPlaylistTracks] = useState([
+    {
+      name: "She's Like a Song",
+      artist: "Tim Wood",
+      album: "UK-CA=UK-CA",
+      id: 4
+    },
+    {
+      name: "Secondhand Smoke",
+      artist: "Tim Wood",
+      album: "UK-CA=UK-CA",
+      id: 5
+    },
+    {
+      name: "Rollin' On",
+      artist: "Tim Wood",
+      album: "UK-CA=UK-CA",
+      id: 6
+    },
+  ]);
+
   return (
 
     <div>
@@ -41,7 +64,7 @@ function App() {
         {/* Add search results component*/}
         <SearchResults userSearchResults={searchResults}/>
         {/* Add playlist component*/}
-        <Playlist />
+        <Playlist playlistName={playlistName} playlistTracks={playlistTracks}/>
       </div>
     </div>
     </div>
