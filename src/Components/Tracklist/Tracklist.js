@@ -26,6 +26,8 @@ function Tracklist(props) {
         name={track.name}
         artist={track.artist}
         album={track.album}
+        isRemoval={props.isRemoval}
+        onAdd={props.onAdd}
         />
         );
                 })}
