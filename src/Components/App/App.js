@@ -9,7 +9,7 @@ import Tracklist from "../Tracklist/Tracklist";
 function App() {
   return (
     <div>
-      <header className={styles["App-header"]}>
+      <header className={styles.highlight}>
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
       </header>
     <div className={styles.App} >
