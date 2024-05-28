@@ -3,11 +3,10 @@ import styles from "./Playlist.module.css";
 import Tracklist from "../Tracklist/Tracklist";
 
 function Playlist(props) {
-    const [isLoading, setIsLoading] = useState(true);
   return (
     <div className={styles.Playlist}>
-      <input defaultValue={styles["New Playlist"]} />
-      <Tracklist playlistName={props.playlistName} playlistTracks={props.playlistTracks}/>
+      <input defaultValue={"New Playlist"} />
+      <Tracklist playlistName={props.playlistName} userSearchResults={props.playlistTracks}/>
       <button className={styles["Playlist-save"]}>
         SAVE TO SPOTIFY
       </button>
