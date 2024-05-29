@@ -17,7 +17,7 @@ function Tracklist(props) {
     <div className={styles.Tracklist}>
       {searchResults.map(track => {
                 // Log each track object to the console
-                console.log('Track:', track);
+                //console.log('Track:', track);
 
                 // Return the Track component for each track
                 return (

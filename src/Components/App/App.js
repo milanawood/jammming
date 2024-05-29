@@ -49,10 +49,17 @@ function App() {
       album: "UK-CA=UK-CA",
       id: 6
     },
+    {
+      name: "Number One Fan",
+      artist: "Tim Wood",
+      album: "UK-CA=UK-CA",
+      id: 6
+    }
   ]);
 
   function addTrack(track) {
-    const existingTrack = playlistTracks.find(t => t.id === track.id)
+    console.log("playlistTracks:", playlistTracks);
+    const existingTrack = playlistTracks.find((t) => t?.id === track?.id)
     if (!existingTrack) {
     let newTrack= playlistTracks.concat(track);
       setPlaylistTracks(newTrack);
@@ -62,8 +69,8 @@ function App() {
   };
 
   function removeTrack(track) {
-    const removalTrack = playlistTracks.filter((t) => track.id !== track.id);
-    setPlaylistTracks(removalTrack);
+    const existingTrack = playlistTracks.filter((t) => track.id !== track.id);
+    setPlaylistTracks(existingTrack);
   }
 
 
