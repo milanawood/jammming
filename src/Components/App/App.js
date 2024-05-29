@@ -53,7 +53,7 @@ function App() {
       name: "Number One Fan",
       artist: "Tim Wood",
       album: "UK-CA=UK-CA",
-      id: 6
+      id: 7
     }
   ]);
 
