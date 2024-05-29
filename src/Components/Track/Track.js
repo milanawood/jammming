@@ -13,8 +13,8 @@ function Track(props) {
     }
 
     function passTrack() {
-        props.onAdd(props.tracks);
-    }
+        props.onAdd(props.track);
+    };
 
     function passTrackToRemove() {
         props.onRemove(props.track);
@@ -23,9 +23,9 @@ function Track(props) {
     return (
         <div className={styles.Track}>
             <div className={styles["Track-information"]}>
-                <h3>{props.name}</h3>
+                <h3>{props.track.name}</h3>
                 <p>
-                    {props.artist} | {props.album}
+                    {props.track.artist} | {props.track.album}
                 </p>
             </div>
             {renderAction()}

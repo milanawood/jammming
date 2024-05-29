@@ -56,22 +56,21 @@ function App() {
       id: 7
     }
   ]);
-
+  
   function addTrack(track) {
-    console.log("playlistTracks:", playlistTracks);
-    const existingTrack = playlistTracks.find((t) => t?.id === track?.id)
-    if (!existingTrack) {
-    let newTrack= playlistTracks.concat(track);
-      setPlaylistTracks(newTrack);
+    const existingTrack = playlistTracks.find((t) => t.id === track.id);
+    const newTrack = playlistTracks.concat(track);
+    if (existingTrack) {
+      console.log("Track already exists");
     } else {
-      alert("Track already in playlist");
-    };
+      setPlaylistTracks(newTrack);
+    }
   };
 
   function removeTrack(track) {
-    const existingTrack = playlistTracks.filter((t) => track.id !== track.id);
+    const existingTrack = playlistTracks.filter((t) => t.id !== track.id);
     setPlaylistTracks(existingTrack);
-  }
+  };
 
 
   return (

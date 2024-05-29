@@ -15,13 +15,14 @@ function Tracklist(props) {
       }, []);
   return (
     <div className={styles.Tracklist}>
-      {searchResults.map(track => {
+      {props.userSearchResults.map(track => {
                 // Log each track object to the console
                 //console.log('Track:', track);
 
                 // Return the Track component for each track
                 return (
         <Track 
+        track={track}
         key={track.id}
         name={track.name}
         artist={track.artist}
