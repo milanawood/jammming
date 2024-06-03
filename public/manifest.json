@@ -1,25 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "files": {
+    "main.css": "/static/css/main.6d5b047b.css",
+    "main.js": "/static/js/main.bcf51c95.js",
+    "static/js/453.a69270cd.chunk.js": "/static/js/453.a69270cd.chunk.js",
+    "static/media/Designer.png": "/static/media/Designer.d06a4a749ddc7ba524bb.png",
+    "index.html": "/index.html",
+    "main.6d5b047b.css.map": "/static/css/main.6d5b047b.css.map",
+    "main.bcf51c95.js.map": "/static/js/main.bcf51c95.js.map",
+    "453.a69270cd.chunk.js.map": "/static/js/453.a69270cd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d5b047b.css",
+    "static/js/main.bcf51c95.js"
+  ]
 }
