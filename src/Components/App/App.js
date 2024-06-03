@@ -100,17 +100,18 @@ function App() {
         <SearchBar onSearch={search} />
 
         <div className={styles["App-playlist"]}>
-          {/* Add search results component*/}
+          
           <SearchResults
             userSearchResults={searchResults}
             onAdd={addTrack} />
-          {/* Add playlist component*/}
+          
           <Playlist
-            onSave={savePlaylist}
-            onNameChange={updatePlaylistName}
             playlistName={playlistName}
             playlistTracks={playlistTracks}
-            onRemove={removeTrack} />
+            onRemove={removeTrack}
+            onSave={savePlaylist}
+            onNameChange={updatePlaylistName} 
+            />
         </div>
       </div>
     </div>
