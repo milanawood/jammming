@@ -31,7 +31,7 @@ function App() {
   const [playlistName, setPlaylistName] = useState("My Playlist")
 
   const [playlistTracks, setPlaylistTracks] = useState([
-    {
+   /* {
       name: "She's Like a Song",
       artist: "Tim Wood",
       album: "UK-CA=UK-CA",
@@ -54,7 +54,7 @@ function App() {
       artist: "Tim Wood",
       album: "UK-CA=UK-CA",
       id: 7
-    }
+    } */
   ]);
 
   function addTrack(track) {
@@ -91,11 +91,11 @@ function App() {
 
   return (
 
-    <div>
-      <header className={styles.highlight}>
+    <div className={styles.App}>
+      <header>
         <h1>Ja<span className={styles.highlight}>mmm</span>ing</h1>
       </header>
-      <div className={styles.App} >
+      <div>
         <SearchBar onSearch={search} />
 
         <div className={styles["App-playlist"]}>
