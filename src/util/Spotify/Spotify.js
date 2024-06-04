@@ -1,6 +1,6 @@
 let accessToken;
 const clientID = "79737409d0bb4055803df02d2b3fe3bb";
-const redirectUrl = "http://localhost:3000";
+const redirectUrl = "https://milanawood.github.io/jammming/";
 
 const Spotify = {
     getAccessToken() {
@@ -42,33 +42,7 @@ const Spotify = {
             });
     },
 
-   /* savePlaylist(name, trackUris) {
-        if (!name || !trackUris) return;
-        const aToken = Spotify.getAccessToken();
-        const header = { Authorization: `Bearer ${aToken}` };
-        let userId;
-        return fetch(`https://api.spotify.com/v1/me`, {headers: header})
-        .then((response) => response.json())
-        .then((jsonResponse) => {
-            userId = jsonResponse.id;
-            let playlistId;
-            return fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
-                headers: header,
-                method: "post",
-                body: JSON.stringify(name)
-            })
-            .then((response) => response.json())
-            .then((jsonResponse) => {
-                playlistId = jsonResponse.id;
-                return fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
-                    headers: header,
-                    method: "post",
-                    body: JSON.stringify({ uris: trackUris })
-                })
-            })
-        });
-            
-    } */
+
     async savePlaylist(name, trackUris) {
         if (!name || !trackUris) {
             return;
