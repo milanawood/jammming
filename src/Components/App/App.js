@@ -8,7 +8,7 @@ import { Spotify } from "../../util/Spotify/Spotify";
 
 function App() {
   const [searchResults, setSearchResults] = useState([
-    {
+    /*{
       name: "Sons & Daughters",
       artist: "Tim Wood",
       album: "Timing is Everything",
@@ -25,7 +25,7 @@ function App() {
       artist: "Max Wood",
       album: "Tiny Temper",
       id: 3,
-    }
+    }*/
   ]);
 
   const [playlistName, setPlaylistName] = useState("My Playlist")
@@ -73,15 +73,19 @@ function App() {
   };
 
   function updatePlaylistName(name) {
-    setPlaylistName(name)
+    setPlaylistName(name);
   }
-
-  function savePlaylist() {
+  
+  async function savePlaylist() {
     const trackUris = playlistTracks.map((t) => t.uri);
-    Spotify.savePlaylist(playlistName, trackUris).then(() => {
-      updatePlaylistName("New Playlist")
-      setPlaylistTracks([])
-    })
+    try {
+      await Spotify.savePlaylist(playlistName, trackUris);
+      updatePlaylistName("New Playlist");
+      setPlaylistTracks([]);
+    } catch (error) {
+      // Handle the error (e.g., show an error message)
+      console.error("Error saving playlist:", error);
+    }
   }
 
   function search(term) {
