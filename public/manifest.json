@@ -1,16 +1,16 @@
 {
-  "files": {
-    "main.css": "/static/css/main.6d5b047b.css",
-    "main.js": "/static/js/main.bcf51c95.js",
-    "static/js/453.a69270cd.chunk.js": "/static/js/453.a69270cd.chunk.js",
-    "static/media/Designer.png": "/static/media/Designer.d06a4a749ddc7ba524bb.png",
-    "index.html": "/index.html",
-    "main.6d5b047b.css.map": "/static/css/main.6d5b047b.css.map",
-    "main.bcf51c95.js.map": "/static/js/main.bcf51c95.js.map",
-    "453.a69270cd.chunk.js.map": "/static/js/453.a69270cd.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.6d5b047b.css",
-    "static/js/main.bcf51c95.js"
-  ]
+  "short_name": "Jammming",
+  "name": "Jammming assignment",
+  "icons": [
+    {
+      "src": "jammingFavicon.jpeg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "scope": ".",
+  "display": "standalone",
+  "theme_color": "#6c41ec",
+  "background_image": "src/Components/App/Designer.png"
 }
