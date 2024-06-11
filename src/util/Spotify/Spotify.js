@@ -56,21 +56,21 @@ const Spotify = {
           };
       
           // Get user ID
-          const userResponse = fetch(`https://api.spotify.com/v1/me`, { headers: header });
-          const userJson = userResponse.json();
+          const userResponse = await fetch(`https://api.spotify.com/v1/me`, { headers: header });
+          const userJson = await userResponse.json();
           const userId = userJson.id;
       
           // Create playlist
-          const playlistResponse = fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
+          const playlistResponse = await fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
             method: 'POST',
             headers: header,
             body: JSON.stringify({ name: name }), 
           });
-          const playlistJson = playlistResponse.json();
+          const playlistJson = await playlistResponse.json();
           const playlistId = playlistJson.id;
       
           // Add tracks to playlist
-          fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
+          await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
             method: 'POST',
             headers: header,
             body: JSON.stringify({ uris: trackUris }),
